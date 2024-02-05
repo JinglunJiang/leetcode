@@ -8,6 +8,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<Integer> queue = new PriorityQueue<>();
