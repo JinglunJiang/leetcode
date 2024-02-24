@@ -13,6 +13,8 @@ class Node {
 }
 */
 
+
+// The reason for keeping a HashMap is to prevent from creating duplicated nodes
 class Solution {
     HashMap<Node, Node> map = new HashMap<>();
 
