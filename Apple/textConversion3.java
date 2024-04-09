@@ -1,31 +1,34 @@
 import java.util.*;
 
-class textConversion {
+// Input: A String which is a website link
+// Output: A String which is the reversed website link according to the sperator "."
 
-    public String textConversion(String inputString){
-        /*
-        Input:
-        Output:
-        
-        */
-        // Store the input string in an array seperated by the seperator '.'.
-        String[] array = inputString.split('\\.');
+// Constraints: It is not possible for the "www.apple.com" 
+// Time Complexity?
+
+// Idea: String[] store different part of the original string, iterate backward, add the seperator back
+// String.split("\\.");
+// StringBuilder()
+// Time complexity: O(n)
+// Space complexity: O(n)
+
+// Test case: Input: www.apple.com Return: com.apple.www
+
+class textConversion3 {
+    public static String textConverter(String inputString){
+        String[] stringArray = inputString.split('\\.');
         StringBuilder sb = new StringBuilder();
-        
-        // Iterate through the array backwards
-        for (int i = array.length - 1; i >= 0; i--){
-            sb.append(array[i]);
-            // When it is not the last part, append the '.' back.
+        for (int i = stringArray.length - 1; i >= 0; i--){
+            sb.append(stringArray[i]);
             if (i != 0){
                 sb.append('.');
             }
         }
-
-        // Convert back to string type and return.
         return sb.toString();
     }
 
     public static void main(String[] args){
-
+        String input = "www.apple.com";
+        r textConverter(input);
     }
 }
